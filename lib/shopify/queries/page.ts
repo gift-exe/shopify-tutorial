@@ -18,4 +18,24 @@ const pageFragment = `
     ${seoFragment}
 `;
 
-export const getPageQuery = 
+export const getPageQuery = `
+    query getPage($handle: String!) {
+        pageByHandle(handle: $handle) {
+            ...page
+        }
+    }
+    ${pageFragment}
+`;
+
+export const getPagesQUery = `
+    query getPages {
+        pages(first: 100) {
+            edges {
+                node {
+                    ...page
+                }
+            }
+        }
+    }
+    ${pageFragment}
+`;
