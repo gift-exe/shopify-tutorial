@@ -14,7 +14,7 @@ const collectionFragment = `
     ${seoFragment}
 `;
 
-export const getCollectionQUery = `
+export const getCollectionQuery = `
     query getCollection($handle: String!) {
         collection(handle: $handle) {
             ...collection
@@ -23,7 +23,7 @@ export const getCollectionQUery = `
     ${collectionFragment}
 `;
 
-export const getCollectionsQUery = `
+export const getCollectionsQuery = `
     query getCollections {
         collections(first: 100, sortKey: TITLE) {
             edges {

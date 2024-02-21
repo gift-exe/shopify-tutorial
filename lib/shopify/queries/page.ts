@@ -27,7 +27,7 @@ export const getPageQuery = `
     ${pageFragment}
 `;
 
-export const getPagesQUery = `
+export const getPagesQuery = `
     query getPages {
         pages(first: 100) {
             edges {
