@@ -287,7 +287,7 @@ export async function getCollectionProducts({
     collection: string;
     reverse?: boolean;
     sortKey?: string;
-}): Promise<ShopifyProduct[]> {
+}): Promise<Product[]> {
     const res = await shopifyFetch<ShopifyCollectionProductsOperation>({
         query: getCollectionProductsQuery,
         tags: [TAGS.collections, TAGS.products],
@@ -391,7 +391,7 @@ export async function getProducts({
     query?: string;
     reverse?: boolean;
     sortKey?: string;
-}): Promise<ShopifyProduct[]> {
+}): Promise<Product[]> {
     const res = await shopifyFetch<ShopifyProductsOperation>({
         query: getProductsQuery,
         tags: [TAGS.products],
